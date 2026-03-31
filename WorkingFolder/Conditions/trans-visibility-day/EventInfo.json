@@ -1,0 +1,11 @@
+{
+    "Name": "Transgender Visibility Day",
+    "Description": "A day for recognition of and pride for trans people!",
+    "Color": {
+        "r": "255",
+        "g": "255",
+        "b": "255"
+    },
+    "Author": "Optional",
+    "Footer": "Optional"
+}
