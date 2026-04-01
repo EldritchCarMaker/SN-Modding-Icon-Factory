@@ -1,5 +1,5 @@
 {
-    "Name": "Transgender Visibility Day",
+    "Name": "[Transgender Visibility Day](<https://en.wikipedia.org/wiki/International_Transgender_Day_of_Visibility>)",
     "Description": "A day for recognition of and pride for trans people!",
     "Color": {
         "R": "255",
@@ -7,5 +7,5 @@
         "B": "255"
     },
     "Author": "Aci",
-    "Footer": "[Wikipedia](<https://en.wikipedia.org/wiki/International_Transgender_Day_of_Visibility>)"
+    "Footer": "This server is queer supportive and queer run."
 }
