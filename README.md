@@ -16,6 +16,7 @@ Events are handled by an annoyingly complicated series of interpreters, that try
 - Days of the week (eg, second monday of january)
 - simple month-day dates (eg, Jan 1st)
 - monthly events (eg, june)
+
 One noted range that is not currently implemented is "week of" ranges. Such as "The week of february 17th" or "the week after october 12th".
 
 
