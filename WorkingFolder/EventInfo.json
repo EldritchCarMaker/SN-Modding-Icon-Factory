@@ -1,0 +1,11 @@
+{
+    "Name": "No event!",
+    "Description": "There's no current event for today! If you'd like to add one, use the /submissionhelp command to get information on how to add it'",
+    "Color": {
+        "R": "255",
+        "G": "255",
+        "B": "255"
+    },
+    "Author": "Aci",
+    "Footer": "[Wikipedia](<https://en.wikipedia.org/wiki/International_Transgender_Day_of_Visibility>)"
+}
