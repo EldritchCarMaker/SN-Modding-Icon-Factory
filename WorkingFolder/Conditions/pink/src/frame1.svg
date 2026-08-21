@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256">
+    <defs>
+        <filter id="bloom">
+            <feColorMatrix type="luminanceToAlpha"/>
+            <feComposite in="SourceGraphic" operator="in"/>
+            <feGaussianBlur stdDeviation="3"/>
+            <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode/>
+            </feMerge>
+        </filter>
+        <filter id="pink">
+            <feColorMatrix type="matrix" values="1,0.2,0.6,0,0.07 0.2,0.3,0.2,0,0.03 0.7,0.3,0.8,0,0.05 0,0,0,0,1"/>
+        </filter>
+        <filter id="gear">
+            <feMorphology operator="dilate" radius="2"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0,0,0,0,0 0,0,0,0,0 0,0,0,0,0 0,0,0,1,0"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="bubbles">
+            <feColorMatrix type="matrix" values="0,0,0,0,0.6 0,0,0,0,0.8 0,0,0,0,1 1.5,0,0,0,0"/>
+        </filter>
+        <path id="heart" fill="#FBE" d="M 0,-12 a 8,8 180 0,1 16,16 l -16,16 l -16,-16 a 8,8 180 0,1 16,-16"/>
+        <path id="sparkle" fill="#FEA" d="M 0,-16 C 2,-4 2,-2 16,0 2,2 2,4 0,16 -2,4 -2,2 -16,0 -2,-2 -2,-4 0,-16"/>
+    </defs>
+    <g filter="url(#bloom)">
+        <g filter="url(#pink)">
+            <image width="256" height="256" href="../../../../Resources/SNModding_BG.png"/>
+            <image width="256" height="256" href="../../../../Resources/SNModding_LogoBG.png"/>
+            <image width="256" height="256" href="../../../../Resources/SNModding_LogoS.png"/>
+            <image width="256" height="256" filter="url(#gear)" href="../../../../Resources/Gears_Animated/Gear_01.png"/>
+        </g>
+        <image width="256" height="256" filter="url(#bubbles)" href="bubbles.png"/>
+        <use transform="translate(55 65) rotate(-30) scale(0.7)" href="#heart"/>
+        <use transform="translate(90 25) rotate(-20)" href="#heart"/>
+        <use transform="translate(120 30) rotate(-10) scale(0.5)" href="#heart"/>
+        <use transform="translate(195 110) rotate(20) scale(1.2)" href="#heart"/>
+        <use transform="translate(240 10) rotate(10) scale(0.4)" href="#heart"/>
+        <g fill="#FFF" stroke="#FFF" stroke-width="5" stroke-linejoin="round">
+            <path d="m 32.29,102.85 c -0.13,-4.61 -0.17,-9.22 -0.12,-13.83 0.45,-12.73 1.51,-25.43 2.63,-38.12 0.75,-9.04 1.74,-18.05 2.62,-27.07 0.36,-2.71 0.58,-5.44 0.94,-8.15 0.01,-0.07 0.23,-1.62 0.28,-1.82 0.05,-0.15 0.16,-0.28 0.23,-0.42 -1.54,0.97 -3.13,1.86 -4.62,2.91 -0.11,0.07 0.27,0.02 0.38,0.09 0.28,0.17 0.51,0.41 0.77,0.61 4.64,4.32 9.03,8.9 13.52,13.38 8.61,8.38 17.11,16.88 25.83,25.15 5.23,4.64 10.42,9.32 15.74,13.86 2.6,2.17 5.19,4.34 7.78,6.52 0,0 4.76,-2.98 4.76,-2.98 v 0 c -2.63,-2.14 -5.26,-4.28 -7.86,-6.46 -2.3,-1.94 -4.56,-3.92 -6.84,-5.87 -2.76,-2.37 -2.77,-2.36 -5.7,-4.79 -1.16,-0.99 -2.3,-2.01 -3.45,-3.01 C 70.36,44.67 61.78,36.26 53.35,27.71 48.99,23.14 44.74,18.47 40.3,13.98 c -0.26,-0.24 -0.51,-0.49 -0.78,-0.72 -0.21,-0.18 -0.4,-0.63 -0.65,-0.52 -5.2,2.3 -5.27,1.85 -5.67,5.48 -0.31,2.7 -0.6,5.41 -0.81,8.12 -0.55,8.9 -1.21,17.79 -1.86,26.68 -0.55,6.74 -0.85,10.66 -1.53,17.44 -0.27,2.71 -0.62,5.42 -0.88,8.13 -0.42,4.29 -0.62,8.6 -0.83,12.9 -0.08,4.67 -0.09,9.34 -0.22,14.02 z"/>
+            <path d="m 231.89,104.96 c -0.19,-4.63 -0.74,-9.22 -1.2,-13.83 -1.05,-7.93 -1.97,-15.87 -2.9,-23.81 -0.62,-5.17 -1.37,-10.34 -1.7,-15.54 -0.15,-2.43 -0.12,-3.68 -0.14,-6.06 0.03,-4.15 0.6,-8.26 1.36,-12.33 0.54,-3.03 1.21,-6.03 1.99,-9.01 0.99,-3.68 1.99,-3.86 -5.39,-4.62 -0.66,-0.07 -1.01,0.85 -1.51,1.27 -4.41,3.81 -8.36,8.1 -12.4,12.29 -5.21,5.42 -10.85,10.4 -16.37,15.5 -4.58,4.42 -9.5,8.45 -14.62,12.21 -4.18,2.8 -8.37,5.58 -12.35,8.66 -1.67,1.4 -3.32,2.83 -4.93,4.3 0,0 4.89,3.02 4.89,3.02 v 0 c 1.54,-1.5 3.12,-2.96 4.78,-4.33 3.95,-3.09 8.13,-5.85 12.26,-8.7 5.11,-3.8 10.03,-7.84 14.58,-12.31 5.51,-5.13 11.14,-10.14 16.42,-15.5 4.05,-4.17 8.03,-8.43 12.52,-12.14 0.53,-0.4 1.89,-0.62 1.59,-1.21 -0.83,-1.6 -2.71,-2.38 -4.07,-3.57 -0.04,-0.03 0.11,0.05 0.12,0.1 0.01,0.17 -0.06,0.33 -0.09,0.49 -0.14,0.6 -0.34,1.2 -0.46,1.8 -0.74,3 -1.41,6.03 -1.95,9.07 -0.72,4.13 -1.32,8.29 -1.28,12.5 0.04,2.26 0.05,3.86 0.2,6.14 0.36,5.22 1.13,10.4 1.78,15.59 0.94,7.9 1.82,15.81 2.73,23.72 0.45,4.54 1,9.08 0.96,13.65 z"/>
+            <path d="m 177.27,156.94 c 0.6,-0.17 1.2,-0.35 1.8,-0.49 0.56,-0.13 1.12,-0.23 1.68,-0.35 1.91,-0.42 3.81,-0.89 5.73,-1.28 4.66,-0.95 10.33,-1.92 15,-2.75 6.6,-1.16 13.2,-2.27 19.78,-3.53 4.34,-0.83 8.67,-1.75 13.01,-2.61 3.41,-0.67 6.85,-1.19 10.3,-1.61 0,0 2.44,-4.97 2.44,-4.97 v 0 c -3.51,0.55 -7.02,1.15 -10.49,1.91 -4.4,0.98 -8.78,2.03 -13.18,2.98 -6.61,1.42 -13.26,2.67 -19.92,3.83 -5.07,0.87 -9.73,1.71 -14.83,2.4 -2.08,0.28 -4.81,0.47 -7.07,0.84 -0.59,0.1 -1.17,0.25 -1.76,0.35 z"/>
+            <path d="m 171.88,173.86 c 4.56,0.22 9.1,0.68 13.63,1.2 9.78,1.17 19.45,3.04 29.11,4.92 6.71,1.32 13.39,2.78 20.08,4.22 2.44,0.44 4.87,0.91 7.25,1.6 0.73,0.23 0.37,0.12 1.07,0.33 0,0 2.78,-5.09 2.78,-5.09 v 0 c -0.71,-0.2 -0.34,-0.09 -1.1,-0.31 -2.44,-0.58 -4.93,-0.96 -7.4,-1.43 -6.82,-1.06 -13.6,-2.32 -20.37,-3.66 -9.65,-1.85 -19.3,-3.77 -29.03,-5.14 -4.46,-0.63 -8.93,-1.17 -13.38,-1.85 z"/>
+            <path d="m 162.31,189.96 c 2.32,1.3 4.56,2.74 6.89,4.02 1.07,0.59 2.15,1.14 3.22,1.71 7.09,3.91 14.31,7.58 21.44,11.43 5.26,2.91 10.6,5.66 16.01,8.29 2.96,1.38 5.9,2.82 8.83,4.27 1.78,0.91 3.55,1.82 5.26,2.83 1,0.59 1.73,1.51 2.55,2.32 1.54,1.34 3.04,2.72 4.64,3.99 0,0 2.93,-4.92 2.93,-4.92 v 0 c -1.62,-1.2 -3.14,-2.52 -4.57,-3.94 -0.82,-0.9 -1.54,-1.92 -2.65,-2.48 -1.77,-0.94 -3.6,-1.77 -5.38,-2.7 -2.94,-1.45 -5.89,-2.87 -8.91,-4.16 -2.32,-1.05 -4.64,-2.1 -6.92,-3.22 -3.11,-1.53 -6.14,-3.19 -9.21,-4.79 -7.15,-3.79 -14.39,-7.41 -21.41,-11.46 -3.31,-2 -6.63,-4.01 -9.77,-6.27 z"/>
+            <path d="m 88.14,150.97 c -0.18,-0.02 -0.35,-0.05 -0.53,-0.06 -1.17,-0.06 -2.35,-0.08 -3.52,-0.16 -6.81,-0.47 -13.58,-1.39 -20.35,-2.14 -7.14,-0.74 -14.27,-1.66 -21.41,-2.43 -3.48,-0.37 -6.96,-0.65 -10.45,-0.94 -2.67,-0.16 -5.34,-0.31 -8,-0.51 -2.31,-0.13 -4.61,-0.4 -6.91,-0.66 -1.23,-0.2 -2.45,-0.4 -3.69,-0.5 -0.54,-0.09 -0.27,-0.04 -0.79,-0.14 0,0 2.56,5.24 2.56,5.24 v 0 c 0.53,0.08 0.26,0.04 0.83,0.1 1.22,0.1 2.43,0.29 3.64,0.43 2.3,0.22 4.59,0.46 6.89,0.59 2.67,0.19 5.33,0.36 8,0.51 3.44,0.24 6.89,0.46 10.33,0.73 7.07,0.61 14.14,1.36 21.2,2.03 5.91,0.61 3.96,0.4 10,1.08 3.07,0.35 7.38,0.81 10.46,1.28 7.67,1.17 1.92,0.46 4.4,0.76 z"/>
+            <path d="m 83.53,164.94 c -4.88,0.67 -9.82,0.73 -14.74,0.86 -5.11,0.1 -10.23,0.09 -15.34,0.42 -1.63,0.11 -5.48,0.44 -7.15,0.58 -4.77,0.42 -9.55,0.65 -14.32,1 -1.91,0.15 -3.82,0.36 -5.71,0.66 -1.77,0.23 -3.54,0.49 -5.29,0.82 -1.13,0.27 -2.3,0.53 -3.35,1.05 -0.54,0.26 -1.07,0.52 -1.59,0.8 -0.3,0.19 -0.15,0.1 -0.45,0.26 0,0 2.92,5.08 2.92,5.08 v 0 c 0.31,-0.17 0.16,-0.09 0.45,-0.26 0.51,-0.29 1.04,-0.54 1.56,-0.81 0.99,-0.51 2.08,-0.8 3.16,-1.05 1.75,-0.33 3.51,-0.59 5.27,-0.82 1.87,-0.27 3.75,-0.52 5.62,-0.75 4.71,-0.51 9.43,-0.89 14.15,-1.33 1.78,-0.17 5.35,-0.51 7.1,-0.63 5.11,-0.34 10.23,-0.33 15.34,-0.37 5.01,-0.03 10.03,-0.05 15.04,-0.41 z"/>
+            <path d="m 84.14,178.94 c -2.63,2.69 -5.89,4.59 -9.08,6.51 -6.89,3.98 -14,7.54 -21.08,11.14 -4.88,2.47 -9.62,5.21 -14.37,7.93 -3.81,2.28 -7.32,5.01 -10.71,7.86 -1.38,1.23 -2.74,2.49 -4.09,3.76 0,0 2.92,4.78 2.92,4.78 v 0 c 1.29,-1.32 2.61,-2.61 4,-3.84 3.35,-2.85 6.86,-5.54 10.62,-7.83 4.7,-2.78 9.41,-5.56 14.23,-8.13 7.03,-3.72 14.11,-7.37 21.12,-11.12 3.3,-1.81 6.63,-3.63 9.5,-6.09 z"/>
+        </g>
+        <use transform="translate(62 15) rotate(29) scale(0.21)" href="#sparkle"/>
+        <use transform="translate(106 68) rotate(35) scale(0.62)" href="#sparkle"/>
+        <use transform="translate(39 101) rotate(37) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(64 132) rotate(34) scale(0.6)" href="#sparkle"/>
+        <use transform="translate(185 223) rotate(23) scale(0.17)" href="#sparkle"/>
+        <use transform="translate(21 179) rotate(4) scale(0.17)" href="#sparkle"/>
+        <use transform="translate(252 16) rotate(41) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(181 220) rotate(1) scale(0.26)" href="#sparkle"/>
+        <use transform="translate(230 95) rotate(33) scale(0.42)" href="#sparkle"/>
+        <use transform="translate(1 25) rotate(14) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(60 20) rotate(17) scale(0.36)" href="#sparkle"/>
+        <use transform="translate(175 217) rotate(31) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(218 11) rotate(20) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(38 244) rotate(12) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(155 256) rotate(26) scale(0.25)" href="#sparkle"/>
+        <use transform="translate(34 25) rotate(14) scale(0.6)" href="#sparkle"/>
+        <use transform="translate(225 247) rotate(2) scale(0.35)" href="#sparkle"/>
+        <use transform="translate(56 170) rotate(28) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(229 226) rotate(23) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(39 222) rotate(30) scale(0.17)" href="#sparkle"/>
+        <use transform="translate(193 177) rotate(32) scale(0.25)" href="#sparkle"/>
+        <use transform="translate(251 243) scale(0.16)" href="#sparkle"/>
+        <use transform="translate(256 193) rotate(28) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(40 187) rotate(34) scale(0.17)" href="#sparkle"/>
+        <use transform="translate(215 248) rotate(40) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(38 9) rotate(8) scale(0.19)" href="#sparkle"/>
+        <use transform="translate(51 45) rotate(45) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(219 241) rotate(5) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(226 65) rotate(43) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(1 222) rotate(7) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(12 167) rotate(10) scale(0.34)" href="#sparkle"/>
+        <use transform="translate(22 222) rotate(45) scale(0.22)" href="#sparkle"/>
+        <use transform="translate(53 237) rotate(10) scale(0.31)" href="#sparkle"/>
+        <use transform="translate(61 216) rotate(45) scale(0.25)" href="#sparkle"/>
+        <use transform="translate(241 16) rotate(30) scale(0.38)" href="#sparkle"/>
+        <use transform="translate(119 3) rotate(36) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(160 242) rotate(18) scale(0.65)" href="#sparkle"/>
+        <use transform="translate(230 70) rotate(4) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(53 176) rotate(45) scale(0.43)" href="#sparkle"/>
+        <use transform="translate(101 15) rotate(5) scale(0.31)" href="#sparkle"/>
+        <use transform="translate(216 21) rotate(34) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(33 200) rotate(3) scale(0.23)" href="#sparkle"/>
+        <use transform="translate(28 9) rotate(7) scale(0.19)" href="#sparkle"/>
+        <use transform="translate(65 137) rotate(20) scale(0.6)" href="#sparkle"/>
+        <use transform="translate(228 122) rotate(43) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(241 117) rotate(14) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(0 255) rotate(40) scale(0.24)" href="#sparkle"/>
+        <use transform="translate(253 239) rotate(8) scale(0.21)" href="#sparkle"/>
+        <use transform="translate(207 54) rotate(41) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(0 238) rotate(15) scale(0.34)" href="#sparkle"/>
+        <use transform="translate(94 222) rotate(14) scale(0.53)" href="#sparkle"/>
+        <use transform="translate(64 128) rotate(20) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(207 244) rotate(3) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(114 66) rotate(34) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(11 244) rotate(43) scale(0.31)" href="#sparkle"/>
+        <use transform="translate(50 54) rotate(44) scale(0.29)" href="#sparkle"/>
+        <use transform="translate(18 157) rotate(25) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(47 142) rotate(32) scale(0.35)" href="#sparkle"/>
+        <use transform="translate(180 240) rotate(40) scale(0.47)" href="#sparkle"/>
+        <use transform="translate(216 244) rotate(11) scale(0.43)" href="#sparkle"/>
+        <use transform="translate(204 256) rotate(29) scale(0.5)" href="#sparkle"/>
+        <use transform="translate(1 183) rotate(31) scale(0.36)" href="#sparkle"/>
+        <use transform="translate(70 154) rotate(15) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(94 74) rotate(2) scale(0.28)" href="#sparkle"/>
+        <use transform="translate(255 35) rotate(7) scale(0.48)" href="#sparkle"/>
+        <use transform="translate(190 22) rotate(32) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(147 238) rotate(26) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(65 241) rotate(12) scale(0.25)" href="#sparkle"/>
+        <use transform="translate(208 40) rotate(18) scale(0.37)" href="#sparkle"/>
+        <use transform="translate(163 18) rotate(11) scale(0.52)" href="#sparkle"/>
+        <use transform="translate(246 102) rotate(45) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(49 208) rotate(17) scale(0.3)" href="#sparkle"/>
+        <use transform="translate(138 10) rotate(35) scale(0.39)" href="#sparkle"/>
+        <use transform="translate(197 194) rotate(26) scale(0.25)" href="#sparkle"/>
+        <use transform="translate(27 253) rotate(45) scale(0.47)" href="#sparkle"/>
+        <use transform="translate(27 18) rotate(11) scale(0.19)" href="#sparkle"/>
+        <use transform="translate(6 252) rotate(6) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(15 5) rotate(6) scale(0.28)" href="#sparkle"/>
+        <use transform="translate(42 243) rotate(9) scale(0.16)" href="#sparkle"/>
+        <use transform="translate(242 206) rotate(25) scale(0.28)" href="#sparkle"/>
+        <use transform="translate(33 16) rotate(37) scale(0.34)" href="#sparkle"/>
+        <use transform="translate(58 85) scale(0.37)" href="#sparkle"/>
+        <use transform="translate(107 254) rotate(25) scale(0.49)" href="#sparkle"/>
+        <use transform="translate(113 1) rotate(41) scale(0.33)" href="#sparkle"/>
+        <use transform="translate(203 207) rotate(39) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(80 248) rotate(36) scale(0.3)" href="#sparkle"/>
+        <use transform="translate(125 247) rotate(3) scale(1.22)" href="#sparkle"/>
+        <use transform="translate(232 106) rotate(16) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(13 30) rotate(29) scale(0.21)" href="#sparkle"/>
+        <use transform="translate(202 116) rotate(2) scale(0.44)" href="#sparkle"/>
+        <use transform="translate(4 77) rotate(26) scale(0.59)" href="#sparkle"/>
+        <use transform="translate(40 15) rotate(3) scale(0.26)" href="#sparkle"/>
+        <use transform="translate(33 235) rotate(19) scale(0.27)" href="#sparkle"/>
+        <use transform="translate(21 0) rotate(28) scale(0.22)" href="#sparkle"/>
+        <use transform="translate(71 29) rotate(25) scale(0.26)" href="#sparkle"/>
+        <use transform="translate(233 141) rotate(9) scale(0.3)" href="#sparkle"/>
+        <use transform="translate(213 67) rotate(15) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(226 0) rotate(45) scale(0.22)" href="#sparkle"/>
+        <use transform="translate(54 253) rotate(32) scale(0.28)" href="#sparkle"/>
+        <use transform="translate(34 217) rotate(37) scale(0.16)" href="#sparkle"/>
+        <use transform="translate(43 56) rotate(27) scale(0.37)" href="#sparkle"/>
+        <use transform="translate(220 33) rotate(6) scale(0.72)" href="#sparkle"/>
+        <use transform="translate(231 83) rotate(36) scale(0.29)" href="#sparkle"/>
+        <use transform="translate(68 41) rotate(27) scale(0.2)" href="#sparkle"/>
+        <use transform="translate(47 89) rotate(22) scale(0.21)" href="#sparkle"/>
+        <use transform="translate(33 13) rotate(42) scale(0.57)" href="#sparkle"/>
+        <use transform="translate(55 32) rotate(31) scale(0.46)" href="#sparkle"/>
+        <use transform="translate(26 22) rotate(23) scale(0.17)" href="#sparkle"/>
+        <use transform="translate(253 0) rotate(14) scale(0.34)" href="#sparkle"/>
+        <use transform="translate(56 159) rotate(13) scale(0.61)" href="#sparkle"/>
+        <use transform="translate(4 56) rotate(32) scale(0.34)" href="#sparkle"/>
+        <use transform="translate(187 7) rotate(2) scale(0.63)" href="#sparkle"/>
+        <use transform="translate(201 7) rotate(36) scale(0.21)" href="#sparkle"/>
+        <use transform="translate(119 229) rotate(11) scale(0.18)" href="#sparkle"/>
+        <use transform="translate(196 241) rotate(6) scale(0.22)" href="#sparkle"/>
+        <use transform="translate(64 215) rotate(10) scale(0.19)" href="#sparkle"/>
+        <use transform="translate(237 155) rotate(14) scale(0.32)" href="#sparkle"/>
+        <use transform="translate(167 15) rotate(13) scale(0.31)" href="#sparkle"/>
+        <use transform="translate(195 38) rotate(3) scale(0.53)" href="#sparkle"/>
+        <use transform="translate(33 252) rotate(11) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(202 164) rotate(40) scale(0.23)" href="#sparkle"/>
+        <use transform="translate(221 19) scale(0.19)" href="#sparkle"/>
+        <use transform="translate(0 255) rotate(17) scale(0.31)" href="#sparkle"/>
+        <use transform="translate(248 181) rotate(28) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(33 228) rotate(20) scale(0.15)" href="#sparkle"/>
+        <use transform="translate(255 8) rotate(41) scale(0.3)" href="#sparkle"/>
+        <use transform="translate(215 245) rotate(34) scale(0.29)" href="#sparkle"/>
+        <use transform="translate(191 72) rotate(3) scale(0.16)" href="#sparkle"/>
+    </g>
+</svg>
