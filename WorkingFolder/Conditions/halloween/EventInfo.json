@@ -1,0 +1,11 @@
+{
+    "Name": "Halloween",
+    "Description": "The spooky month 🎃",
+    "Color": {
+        "R": "245",
+        "G": "145",
+        "B": "39"
+    },
+    "Author": "Kallie",
+    "Footer": "Spooky scary skeletons send shivers down your spine."
+}
